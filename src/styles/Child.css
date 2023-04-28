@@ -1,11 +1,3 @@
-.fix-box {
-    width: 250px;
-    height: 250px;
-    margin: 20px;
-    border: 1px white dotted;
-    border-radius: 5px;
-}
-
 #master{
     border-radius: 5px;
     border: 2px white ridge;
@@ -15,4 +7,16 @@
 .subheading{
     color: white;
     text-align: center;
+}
+/* .selection {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+  } */
+  .fix-box {
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    border: 1px white dotted;
+    border-radius: 5px;
 }

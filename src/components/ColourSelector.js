@@ -1,13 +1,24 @@
-
 import React from 'react';
 
-const ColourSelector = (props) => {
-  const { config, selectNextBackground } = props
-  const { background } = config.background;
+const ColourSelector = ({ config, onBackgroundChange, selectedBackground }) => {
+  const { key, label, classname, background } = config;
+
+  const handleClick = () => {
+    onBackgroundChange(config);
+  }
+
+  const isSelected = background === selectedBackground;
+
   return (
-    <button className={props.config.classname} onClick={() => selectNextBackground({background: background})}>
-      {props.config.label}
+    <button
+      className={`${classname} ${isSelected ? 'selected' : ''}`}
+      onClick={handleClick}
+      style={{ background }}
+    >
+      {isSelected && <i className="fa fa-check"></i>}
+      {label}
     </button>
   )
 }
+
 export default ColourSelector;

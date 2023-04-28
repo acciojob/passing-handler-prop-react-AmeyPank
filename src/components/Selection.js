@@ -1,11 +1,19 @@
+import React from 'react';
 
-import React from 'react'
+const Selection = ({ applyColor, selectedBackground }) => {
+  const handleClick = () => {
+    applyColor({ background: selectedBackground });
+  }
 
-export default function Selection(props) {
+  const style = {
+    background: selectedBackground
+  }
+
   return (
-    <div>
-       <div style={props.applyColor} className="fix-box">{props.key}</div>
-       
+    <div className="fix-box" style={style} onClick={handleClick}>
+      <h2 className="subheading">Selection</h2>
     </div>
   )
 }
+
+export default Selection;
